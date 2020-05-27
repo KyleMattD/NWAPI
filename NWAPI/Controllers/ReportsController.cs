@@ -18,7 +18,7 @@ namespace NWAPI.Controllers
     [EnableCors(origins:"*",headers:"*",methods:"*")] 
     public class ReportsController : ApiController
     {
-        [System.Web.Mvc.Route("api/Report/getReportData")]
+        [System.Web.Mvc.Route("api/Reports/getReportData")]
         [HttpGet]
         public dynamic getReportData(int categorySelection)
         {
@@ -93,7 +93,7 @@ namespace NWAPI.Controllers
         //    return Ok(dynaCategories);
         //}
 
-        [System.Web.Mvc.Route("api/Report/getCategories")]
+        [System.Web.Mvc.Route("api/Reports/getCategories")]
         [HttpPost]
         public List<dynamic> getCategories()
         {
