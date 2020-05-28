@@ -8,6 +8,7 @@ using NWAPI.Models;
 
 namespace NWAPI.Controllers
 {
+    [System.Web.Http.Cors.EnableCors(origins: "*", headers: "*", methods: "*")]
     public class RegionsController : ApiController
     {
         private NorthwindEntities db = new NorthwindEntities();
@@ -15,6 +16,7 @@ namespace NWAPI.Controllers
         // GET: api/Regions
         public IQueryable<Region> GetRegions()
         {
+            db.Configuration.ProxyCreationEnabled = false;
             return db.Regions;
         }
 
